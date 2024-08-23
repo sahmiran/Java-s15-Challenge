@@ -21,4 +21,11 @@ public abstract class Person implements Whoareyou {
 
     @Override
     public abstract void whoareyou();
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

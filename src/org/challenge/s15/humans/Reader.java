@@ -57,6 +57,7 @@ public class Reader extends Person implements Whoareyou {
         if(books.contains(book)){
             book.setOwner("Library");
             books.remove(book);
+            System.out.println(book.getTitle()+" returned to library");
         }
     }
 
@@ -69,5 +70,12 @@ public class Reader extends Person implements Whoareyou {
     @Override
     public void whoareyou() {
         System.out.println("This is Reader "+getName());
+    }
+
+    @Override
+    public String toString() {
+        return "Reader{" +
+                "books=" + books +
+                '}';
     }
 }

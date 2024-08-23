@@ -39,4 +39,11 @@ public class Author extends Person implements BookOperation {
             System.out.println(book);
         }
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+
+        "books='" + books + '\'' +
+                '}';
+    }
 }

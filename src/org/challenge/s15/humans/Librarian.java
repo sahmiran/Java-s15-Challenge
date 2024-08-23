@@ -34,7 +34,10 @@ public class Librarian {
         Period period = Period.between(book.getDateofpurchase(), date);
 
         int daysBetween = period.getDays() + period.getMonths() * 30 + period.getYears() * 365;
-        int fine =daysBetween*10;
+        int fine =(daysBetween-5)*10;
+        if(fine<0){
+            fine=0;
+        }
         if(book.getStatus().equals(Status.MEDIUM_CONDITION)){
             fine+=50;
         }
